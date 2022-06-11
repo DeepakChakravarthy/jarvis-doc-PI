@@ -20,8 +20,8 @@ def endpoint2():
     re.sub(clean, '', i)
     parsed_text = CommonRegex(i)
     PII = {}
-    PII['Phone Number'] = parsed_text.phones
-    PII['Credit Card Number'] = parsed_text.credit_cards
+    PII['PhoneNumber'] = parsed_text.phones
+    PII['CreditCardNumber'] = parsed_text.credit_cards
     PII['Email'] = parsed_text.emails
     regex = "(?!666|000|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}"
     p = re.compile(regex)
